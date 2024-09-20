@@ -1,0 +1,87 @@
+---
+title: A Timeline of Marriages in Toronto Before and After COVID
+author: 
+  - Justin Klip
+thanks: "Code and data are available at: https://open.toronto.ca/dataset/marriage-licence-statistics/."
+date: 19 September 2024 
+date-format: long
+abstract: "COVID 19 has had many effects on society, one being the rate of marriage. In this paper we plot and outline the data of marriage licenses acquired in Toronto. This will demonstrate how marriage license quantity declined during COVID, and rebounded hard right after."
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+
+data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
+
+```
+
+
+# Introduction
+
+You can and should cross-reference sections and sub-sections. We use @talia, @opendatatoronto, and @rohan.
+
+The remainder of this paper is structured as follows. @sec-mydatasection
+
+
+
+# Data {#sec-mydatasection}
+
+Some of our data is of penguins (@fig-marriage), from @palmerpenguins.
+
+```{r}
+#| label: fig-marriage
+#| fig-cap: Bills of penguins
+#| echo: false
+
+data |> 
+  ggplot(aes(x = date, y = marriage_licenses)) +
+  geom_point()
+
+```
+
+As seen in our plot here, we can see that marriages tend to follow a season pattern before COVID-19. After COVID-19, there is an uptick once again in the number of marriage licenses, and there is also much more variance month to month and the seasonal pattern seems to have disappeared.
+
+And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+
+
+
+
+
+# Discussion
+
+## First discussion point {#sec-first-point}
+
+If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+
+## Second discussion point
+
+## Third discussion point
+
+## Weaknesses and next steps
+
+Weaknesses and next steps should also be included.
+
+\newpage
+
+\appendix
+
+# Appendix {-}
+
+
+# Additional data details
+
+
+
+\newpage
+
+
+# References
+
+
